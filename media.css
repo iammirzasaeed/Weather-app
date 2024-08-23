@@ -1,1 +1,86 @@
 
+/* Base mobile-first styling */
+
+/* General mobile adjustments (0px and up) */
+@media (max-width: 600px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .weather-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #city_input,
+    #searchBtn,
+    #locationBtn {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .weather-data {
+        display: block;
+    }
+
+    .weather-left,
+    .weather-right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .highlights {
+        display: block;
+    }
+
+    .highlights .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet adjustments (600px and up) */
+@media (min-width: 600px) and (max-width: 992px) {
+    .weather-data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .weather-left {
+        grid-column: span 1;
+    }
+
+    .weather-right {
+        grid-column: span 1;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .highlights .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Medium desktops and larger (992px and up) */
+@media (min-width: 992px) {
+    .weather-data {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 20px;
+    }
+
+    .highlights {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
