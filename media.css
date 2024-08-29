@@ -1,86 +1,58 @@
+/* media-queries.css */
 
-/* Base mobile-first styling */
-
-/* General mobile adjustments (0px and up) */
-@media (max-width: 600px) {
-    body {
-        padding: 0 10px;
+/* Styles for devices with a max-width of 768px */
+@media (max-width: 768px) {
+    .weather h1 {
+        font-size: 60px;
+    }
+    
+    .weather h2 {
+        font-size: 30px;
+    }
+    
+    .weather-icon {
+        width: 120px;
     }
 
-    .header {
+    .details {
         flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
+        gap: 20px;
     }
-
-    .weather-input {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #city_input,
-    #searchBtn,
-    #locationBtn {
-        width: 100%;
-        margin-bottom: 10px;
-        padding: 10px;
-    }
-
-    .weather-data {
-        display: block;
-    }
-
-    .weather-left,
-    .weather-right {
-        width: 100%;
-        margin: 0;
-    }
-
-    .highlights {
-        display: block;
-    }
-
-    .highlights .card {
-        margin-bottom: 20px;
+    
+    .col img {
+        width: 30px;
     }
 }
 
-/* Tablet adjustments (600px and up) */
-@media (min-width: 600px) and (max-width: 992px) {
-    .weather-data {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+/* Styles for devices with a max-width of 480px */
+@media (max-width: 480px) {
+    .weather h1 {
+        font-size: 40px;
     }
 
-    .weather-left {
-        grid-column: span 1;
+    .weather h2 {
+        font-size: 24px;
     }
 
-    .weather-right {
-        grid-column: span 1;
+    .search input {
+        font-size: 16px;
+        padding: 8px 20px;
     }
 
-    .highlights {
-        grid-template-columns: 1fr;
+    .search button {
+        width: 50px;
+        height: 50px;
     }
 
-    .highlights .card {
-        margin-bottom: 20px;
-    }
-}
-
-/* Medium desktops and larger (992px and up) */
-@media (min-width: 992px) {
-    .weather-data {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: 20px;
+    .weather-icon {
+        width: 100px;
     }
 
-    .highlights {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+    .col img {
+        width: 25px;
+    }
+
+    .humidity, .wind {
+        font-size: 22px;
     }
 }
