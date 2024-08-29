@@ -28,15 +28,15 @@ async function checkWeather(city) {
            
         }
         else if (data.weather[0].main == "Clear") {
-            weatherIcon.src ="images/clear.png";
+            weatherIcon.src ="clear.png";
             background.src
         }
             else if (data.weather[0].main == "Rain") {
-                weatherIcon.src ="images/rain.png";}
+                weatherIcon.src ="rain.png";}
                 else if (data.weather[0].main == "Drizzle") {
-                    weatherIcon.src ="images/drizzle.png";}
+                    weatherIcon.src ="drizzle.png";}
                     else if (data.weather[0].main == "Mist") {
-                        weatherIcon.src ="images/mist.png";}
+                        weatherIcon.src ="mist.png";}
             document.querySelector(".weather").style.display = "block";
             document.querySelector(".error").style.display= "none";
     }}
